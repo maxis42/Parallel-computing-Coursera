@@ -1,0 +1,18 @@
+﻿Build started 02.10.2015 10:43:34.
+     1>Project "I:\Работа\MOOC\Практика\Итоговая\Модуль 2\ex1\random_vector\random_vector.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         F:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /IDebug /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp vec_random.cpp vec_random_norm.cpp
+         vec_random_norm.cpp
+         vec_random.cpp
+         main.cpp
+         Generating Code...
+       Link:
+         F:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"I:\Работа\MOOC\Практика\Итоговая\Модуль 2\ex1\Debug\random_vector.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\Debug submit.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"I:\Работа\MOOC\Практика\Итоговая\Модуль 2\ex1\Debug\random_vector.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"I:\Работа\MOOC\Практика\Итоговая\Модуль 2\ex1\Debug\random_vector.lib" /MACHINE:X86 Debug\main.obj
+         Debug\vec_random.obj
+         Debug\vec_random_norm.obj
+         random_vector.vcxproj -> I:\Работа\MOOC\Практика\Итоговая\Модуль 2\ex1\Debug\random_vector.exe
+     1>Done Building Project "I:\Работа\MOOC\Практика\Итоговая\Модуль 2\ex1\random_vector\random_vector.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.67
