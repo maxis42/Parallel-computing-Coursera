@@ -1,0 +1,9 @@
+﻿  main.cpp
+main.cpp(27): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+main.cpp(36): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating code
+  0 of 16 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  1.2_matrix_mult.vcxproj -> D:\Parallel-computing-Coursera\Week 1\1.2_matrix_mult\Release\1.2_matrix_mult.exe
