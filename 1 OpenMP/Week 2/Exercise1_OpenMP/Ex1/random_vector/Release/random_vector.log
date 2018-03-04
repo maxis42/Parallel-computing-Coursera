@@ -1,5 +1,7 @@
-﻿Build started 20.10.2015 13:04:25.
-
-Build succeeded.
-
-Time Elapsed 00:00:00.01
+﻿  main.cpp
+  vec_random.cpp
+  vec_random_norm.cpp
+  Generating code
+  All 14 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  random_vector.vcxproj -> D:\Parallel-computing-Coursera\1 OpenMP\Week 2\Exercise1_OpenMP\Ex1\Release\random_vector.exe
