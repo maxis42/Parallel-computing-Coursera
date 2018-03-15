@@ -1,0 +1,15 @@
+﻿Build started 10.10.2015 16:32:25.
+     1>Project "I:\Работа\MOOC\Практика\Итоговая\Модуль 3\Ex2\GaussSeidel\GaussSeidel.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         I:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016\windows\bin\intel64\icl.exe /c /Qm32 /ZI /nologo /W3 /Od /Qftz- /D __INTEL_COMPILER=1600 /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /EHsc /RTC1 /MDd /GS /Qopenmp-offload- /Zc:wchar_t /Zc:forScope /Qopenmp_stubs /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP calc_par.cpp
+         calc_par.cpp
+       Link:
+         I:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016\windows\bin\intel64\xilink.exe -qm32 /OUT:"I:\Работа\MOOC\Практика\Итоговая\Модуль 3\Ex2\Debug\GaussSeidel.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"I:\Работа\MOOC\Практика\Итоговая\Модуль 3\Ex2\Debug\GaussSeidel.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"I:\Работа\MOOC\Практика\Итоговая\Модуль 3\Ex2\Debug\GaussSeidel.lib" /MACHINE:X86 Debug\calc_par.obj
+         Debug\calc_seq.obj
+         Debug\init.obj
+         Debug\main.obj
+     1>Done Building Project "I:\Работа\MOOC\Практика\Итоговая\Модуль 3\Ex2\GaussSeidel\GaussSeidel.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.11

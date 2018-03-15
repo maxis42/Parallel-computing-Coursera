@@ -1,0 +1,23 @@
+﻿Build started 12.10.2015 12:33:38.
+     1>Project "I:\Работа\MOOC\Практика\Окончательные примеры\3.2_add_2vector_par\3.2_add_2vector_par\3.2_add_2vector_par.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         I:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016\windows\bin\intel64\icl.exe /c /Qm32 /Zi /nologo /W3 /O2 /Oi /Qipo /Qftz /D __INTEL_COMPILER=1600 /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /EHsc /MD /GS /Gy /Qopenmp-offload /Zc:wchar_t /Zc:forScope /Qopenmp /Fo"Release\\" /Fd"Release\vc140.pdb" /Gd /TP main.cpp
+         main.cpp
+     1>main.cpp(7): error : array is too large
+           	double* a = new double[n];
+           	                      ^
+         
+     1>main.cpp(8): error : array is too large
+           	double* b = new double[n];
+           	                      ^
+         
+     1>main.cpp(9): error : array is too large
+           	double* c = new double[n];
+           	                      ^
+         
+         compilation aborted for main.cpp (code 2)
+     1>Done Building Project "I:\Работа\MOOC\Практика\Окончательные примеры\3.2_add_2vector_par\3.2_add_2vector_par\3.2_add_2vector_par.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.53

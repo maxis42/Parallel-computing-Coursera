@@ -1,0 +1,12 @@
+﻿Build started 23.10.2015 19:41:48.
+     1>Project "I:\Работа\MOOC\Практика\Окончательные примеры\3.2_list\3.2_list\3.2_list.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         I:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016\windows\bin\intel64\icl.exe /c /Qm32 /ZI /nologo /W3 /Od /Qftz- /D __INTEL_COMPILER=1600 /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /EHsc /RTC1 /MDd /GS /Qopenmp-offload /Zc:wchar_t /Zc:forScope /Qopenmp /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP main.cpp
+         main.cpp
+       Link:
+         I:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016\windows\bin\intel64\xilink.exe -qm32 /OUT:"I:\Работа\MOOC\Практика\Окончательные примеры\3.2_list\Debug\3.2_list.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"I:\Работа\MOOC\Практика\Окончательные примеры\3.2_list\Debug\3.2_list.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"I:\Работа\MOOC\Практика\Окончательные примеры\3.2_list\Debug\3.2_list.lib" /MACHINE:X86 Debug\main.obj
+     1>Done Building Project "I:\Работа\MOOC\Практика\Окончательные примеры\3.2_list\3.2_list\3.2_list.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.27
