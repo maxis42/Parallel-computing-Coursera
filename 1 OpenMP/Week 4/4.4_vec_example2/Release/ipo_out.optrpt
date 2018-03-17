@@ -1,0 +1,451 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINING OPTION VALUES:
+  -Qinline-factor: 100
+  -Qinline-min-size: 20
+  -Qinline-max-size: 230
+  -Qinline-max-total-size: 2000
+  -Qinline-max-per-routine: disabled
+  -Qinline-max-per-compile: disabled
+
+
+Begin optimization report for: main()
+
+    Report from: Interprocedural optimizations [ipo]
+
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(7,1):INLINE REPORT START:(main()) [1]
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(31,2):(1)-> std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::_Myt &(__cdecl *)(std::basic_ostream<char, std::char_traits<char>>::_Myt &))
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(31,2):(1)-> std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(36,4):(1)-> std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, float)
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(36,4):(1)-> std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(38,3):(1)-> std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::_Myt &(__cdecl *)(std::basic_ostream<char, std::char_traits<char>>::_Myt &))
+INLINE REPORT END
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(12,2)
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(12,2):remark #15300: LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(17,3)
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(17,3):remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+LOOP BEGIN at I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(18,4)
+Multiversioned v1
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(18,4):remark #25228: Loop multiversioned for Data Dependence
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(18,4):remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(18,4):remark #15346: vector dependence: assumed FLOW dependence between a line 20 and a line 20
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(18,4):remark #25436: completely unrolled by 6  
+LOOP END
+
+LOOP BEGIN at I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(18,4)
+Multiversioned v2
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(18,4):remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(18,4):remark #25436: completely unrolled by 6  
+LOOP END
+LOOP END
+
+LOOP BEGIN at I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(22,3)
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(22,3):remark #15542: loop was not vectorized: inner loop was already vectorized
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(22,3):remark #25436: completely unrolled by 3  
+
+LOOP BEGIN at I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(25,15)
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(25,15):remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+LOOP END
+LOOP END
+
+LOOP BEGIN at I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(32,2)
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(32,2):remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+LOOP BEGIN at I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(34,3)
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(34,3):remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(797,4)
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\streambuf(194,3):remark #15543: loop was not vectorized: loop with function call not considered an optimization candidate.
+LOOP END
+
+LOOP BEGIN at I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(810,4)
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\streambuf(194,3):remark #15543: loop was not vectorized: loop with function call not considered an optimization candidate.
+LOOP END
+===========================================================================
+
+Begin optimization report for: std::numpunct<char>::do_grouping(const std::numpunct<char> *, std::string *) const
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(530,3):remark #34026: call to _memcpy implemented as a call to optimized library version
+===========================================================================
+
+Begin optimization report for: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *, const std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Myt &, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type)
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(530,3):remark #34026: call to _memcpy implemented as a call to optimized library version
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(553,3):remark #34008: call to _memmove not inlined based on compiler heuristics
+===========================================================================
+
+Begin optimization report for: std::numpunct<char>::do_falsename(const std::numpunct<char> *, std::numpunct<char>::string_type *) const
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(530,3):remark #34026: call to _memcpy implemented as a call to optimized library version
+===========================================================================
+
+Begin optimization report for: std::numpunct<char>::do_truename(const std::numpunct<char> *, std::numpunct<char>::string_type *) const
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(530,3):remark #34026: call to _memcpy implemented as a call to optimized library version
+===========================================================================
+
+Begin optimization report for: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::insert(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type, char)
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(553,3):remark #34008: call to _memmove not inlined based on compiler heuristics
+===========================================================================
+
+Begin optimization report for: std::numpunct<char>::grouping(const std::numpunct<char> *, std::string *) const
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(530,3):remark #34026: call to _memcpy implemented as a call to optimized library version
+===========================================================================
+
+Begin optimization report for: std::numpunct<char>::_Getcat(const std::locale::facet **, const std::locale *)
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h(53,5):remark #34000: call to _memset implemented inline with stores with proven (alignment, offset): (16, 4)
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h(54,40):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (4, 0), and destination (alignment, offset): (4, 0)
+===========================================================================
+
+Begin optimization report for: std::numpunct<char>::numpunct(std::numpunct<char> *, const std::_Locinfo &, size_t, bool)
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2) inlined into I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(127,3)
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2):remark #25401: memcopy(with guard) generated
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2):remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+LOOP BEGIN at I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2) inlined into I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(127,3)
+Multiversioned v2
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2):remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2):remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2) inlined into I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(127,3)
+Remainder, Multiversioned v2
+LOOP END
+LOOP END
+
+LOOP BEGIN at I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2) inlined into I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(127,3)
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2):remark #25401: memcopy(with guard) generated
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2):remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+LOOP BEGIN at I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2) inlined into I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(127,3)
+Multiversioned v2
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2):remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2):remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2) inlined into I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(127,3)
+Remainder, Multiversioned v2
+LOOP END
+LOOP END
+
+LOOP BEGIN at I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2) inlined into I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(127,3)
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2):remark #25401: memcopy(with guard) generated
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2):remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+LOOP BEGIN at I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2) inlined into I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(127,3)
+Multiversioned v2
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2):remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2):remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(730,2) inlined into I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(127,3)
+Remainder, Multiversioned v2
+LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(731,3):remark #34026: call to memcpy implemented as a call to optimized library version
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(731,3):remark #34026: call to memcpy implemented as a call to optimized library version
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(731,3):remark #34026: call to memcpy implemented as a call to optimized library version
+===========================================================================
+
+Begin optimization report for: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::resize(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type, char)
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(560,3):remark #34026: call to _memset implemented as a call to optimized library version
+===========================================================================
+
+Begin optimization report for: std::numpunct<char>::truename(const std::numpunct<char> *, std::numpunct<char>::string_type *) const
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(530,3):remark #34026: call to _memcpy implemented as a call to optimized library version
+===========================================================================
+
+Begin optimization report for: std::numpunct<char>::falsename(const std::numpunct<char> *, std::numpunct<char>::string_type *) const
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(530,3):remark #34026: call to _memcpy implemented as a call to optimized library version
+===========================================================================
+
+Begin optimization report for: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Assign_rv(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Myt &&)
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(553,3):remark #34008: call to _memmove not inlined based on compiler heuristics
+===========================================================================
+
+Begin optimization report for: std::exception::exception(std::exception *, const std::exception &)
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h(66,5):remark #34000: call to _memset implemented inline with stores with proven (alignment, offset): (1, 0)
+===========================================================================
+
+Begin optimization report for: std::bad_cast::bad_cast(std::bad_cast *, const std::bad_cast &)
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h(66,5):remark #34000: call to _memset implemented inline with stores with proven (alignment, offset): (1, 0)
+===========================================================================
+
+Begin optimization report for: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Tidy(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *, bool, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type)
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(530,3):remark #34026: call to _memcpy implemented as a call to optimized library version
+===========================================================================
+
+Begin optimization report for: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::append(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *, const char *, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type)
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(530,3):remark #34026: call to _memcpy implemented as a call to optimized library version
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(530,3):remark #34026: call to _memcpy implemented as a call to optimized library version
+===========================================================================
+
+Begin optimization report for: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Copy(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type)
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(530,3):remark #34026: call to _memcpy implemented as a call to optimized library version
+===========================================================================
+
+Begin optimization report for: __$U1
+
+    Report from: Interprocedural optimizations [ipo]
+
+<compiler generated>:INLINE REPORT START:(__$U1) [230]
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\system_error(688,28):(1)-> DELETED: std::_Immortalizer<std::_Iostream_error_category>::~_Immortalizer(std::_Immortalizer<std::_Iostream_error_category> *)
+INLINE REPORT END
+===========================================================================
+
+Begin optimization report for: std::system_error::system_error(std::system_error *, std::error_code, const char *)
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(530,3):remark #34026: call to _memcpy implemented as a call to optimized library version
+===========================================================================
+
+Begin optimization report for: std::_System_error::_System_error(std::_System_error *, std::error_code, const std::string &)
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h(53,5):remark #34000: call to _memset implemented inline with stores with proven (alignment, offset): (1, 0)
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h(54,40):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (4, 0), and destination (alignment, offset): (4, 0)
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\system_error(511,2):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (4, 0), and destination (alignment, offset): (1, 0)
+===========================================================================
+
+Begin optimization report for: std::_System_error::_Makestr(std::string *, std::error_code, std::string)
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(530,3):remark #34026: call to _memcpy implemented as a call to optimized library version
+===========================================================================
+
+Begin optimization report for: std::system_error::system_error(std::system_error *, const std::system_error &)
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h(66,5):remark #34000: call to _memset implemented inline with stores with proven (alignment, offset): (1, 0)
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\system_error(498,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (1, 0)
+===========================================================================
+
+Begin optimization report for: std::_System_error::_System_error(std::_System_error *, const std::_System_error &)
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h(66,5):remark #34000: call to _memset implemented inline with stores with proven (alignment, offset): (1, 0)
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\system_error(498,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (1, 0)
+===========================================================================
+
+Begin optimization report for: std::ios_base::failure::failure(std::ios_base::failure *, const std::ios_base::failure &)
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h(66,5):remark #34000: call to _memset implemented inline with stores with proven (alignment, offset): (1, 0)
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\system_error(498,7):remark #34000: call to memcpy implemented inline with loads and stores with proven source (alignment, offset): (1, 0), and destination (alignment, offset): (1, 0)
+===========================================================================
+
+Begin optimization report for: std::runtime_error::runtime_error(std::runtime_error *, const std::runtime_error &)
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h(66,5):remark #34000: call to _memset implemented inline with stores with proven (alignment, offset): (1, 0)
+===========================================================================
+
+Begin optimization report for: std::_Iostream_error_category::message(const std::_Iostream_error_category *, std::string *, int) const
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(530,3):remark #34026: call to _memcpy implemented as a call to optimized library version
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(530,3):remark #34026: call to _memcpy implemented as a call to optimized library version
+===========================================================================
+
+Begin optimization report for: std::_Generic_error_category::message(const std::_Generic_error_category *, std::string *, int) const
+
+    Report from: Code generation optimizations [cg]
+
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\iosfwd(530,3):remark #34026: call to _memcpy implemented as a call to optimized library version
+===========================================================================
+
+    Report from: Profile guided optimizations [pgo]
+
+
+
+<compiler generated>:remark #24003: __$U1: profile feedback used a static estimate profile
+<compiler generated>:remark #24003: std::bad_cast::~bad_cast(std::bad_cast *, unsigned int): profile feedback used a static estimate profile
+<compiler generated>:remark #24003: std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>::~num_put(std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>> *, unsigned int): profile feedback used a static estimate profile
+<compiler generated>:remark #24003: std::runtime_error::~runtime_error(std::runtime_error *, unsigned int): profile feedback used a static estimate profile
+<compiler generated>:remark #24003: std::_System_error::~_System_error(std::_System_error *, unsigned int): profile feedback used a static estimate profile
+<compiler generated>:remark #24003: std::system_error::~system_error(std::system_error *, unsigned int): profile feedback used a static estimate profile
+<compiler generated>:remark #24003: std::ctype<char>::~ctype(std::ctype<char> *, unsigned int): profile feedback used a static estimate profile
+<compiler generated>:remark #24003: std::error_category::~error_category(std::error_category *, unsigned int): profile feedback used a static estimate profile
+<compiler generated>:remark #24003: std::_Generic_error_category::~_Generic_error_category(std::_Generic_error_category *, unsigned int): profile feedback used a static estimate profile
+<compiler generated>:remark #24003: std::_Iostream_error_category::~_Iostream_error_category(std::_Iostream_error_category *, unsigned int): profile feedback used a static estimate profile
+<compiler generated>:remark #24003: std::ios_base::failure::~failure(std::ios_base::failure *, unsigned int): profile feedback used a static estimate profile
+<compiler generated>:remark #24003: std::numpunct<char>::~numpunct(std::numpunct<char> *, unsigned int): profile feedback used a static estimate profile
+<compiler generated>:remark #24003: std::exception::~exception(std::exception *, unsigned int): profile feedback used a static estimate profile
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt_stdio_config.h(73,1):remark #24003: __local_stdio_printf_options(): profile feedback used a static estimate profile
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(1834,5):remark #24003: sprintf_s(char *, size_t, const char *, ...): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ios(56,3):remark #24003: std::basic_ios<char, std::char_traits<char>>::setstate(std::basic_ios<char, std::char_traits<char>> *, std::ios_base::iostate, bool): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(106,4):remark #24003: std::basic_ostream<char, std::char_traits<char>>::_Sentry_base::~_Sentry_base(std::basic_ostream<char, std::char_traits<char>>::_Sentry_base *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(130,4):remark #24003: std::basic_ostream<char, std::char_traits<char>>::sentry::~sentry(std::basic_ostream<char, std::char_traits<char>>::sentry *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(197,3):remark #24003: std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::_Myt &(__cdecl *)(std::basic_ostream<char, std::char_traits<char>>::_Myt &)): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(418,3):remark #24003: std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, float): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(535,3):remark #24003: std::basic_ostream<char, std::char_traits<char>>::put(std::basic_ostream<char, std::char_traits<char>> *, char): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(576,3):remark #24003: std::basic_ostream<char, std::char_traits<char>>::flush(std::basic_ostream<char, std::char_traits<char>> *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(782,2):remark #24003: std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream(993,2):remark #24003: std::endl<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\stdexcept(165,7):remark #24003: std::runtime_error::runtime_error(std::runtime_error *, const std::runtime_error &): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\stdexcept(165,7):remark #24003: std::runtime_error::~runtime_error(std::runtime_error *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\system_error(438,2):remark #24003: std::error_category::default_error_condition(const std::error_category *, std::error_condition *, int) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\system_error(445,2):remark #24003: std::error_category::equivalent(const std::error_category *, int, const std::error_condition &) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\system_error(452,2):remark #24003: std::error_category::equivalent(const std::error_category *, const std::error_code &, int) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\system_error(498,7):remark #24003: std::_System_error::_System_error(std::_System_error *, const std::_System_error &): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\system_error(503,3):remark #24003: std::_System_error::_Makestr(std::string *, std::error_code, std::string): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\system_error(513,3):remark #24003: std::_System_error::_System_error(std::_System_error *, std::error_code, const std::string &): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\system_error(519,7):remark #24003: std::system_error::system_error(std::system_error *, const std::system_error &): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\system_error(538,3):remark #24003: std::system_error::system_error(std::system_error *, std::error_code, const char *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\system_error(590,3):remark #24003: std::_Generic_error_category::name(const std::_Generic_error_category *) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\system_error(595,3):remark #24003: std::_Generic_error_category::message(const std::_Generic_error_category *, std::string *, int) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\system_error(611,3):remark #24003: std::_Iostream_error_category::name(const std::_Iostream_error_category *) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\system_error(616,3):remark #24003: std::_Iostream_error_category::message(const std::_Iostream_error_category *, std::string *, int) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h(66,5):remark #24003: std::exception::exception(std::exception *, const std::exception &): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h(88,5):remark #24003: std::exception::what(const std::exception *) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_typeinfo.h(116,7):remark #24003: std::bad_cast::~bad_cast(std::bad_cast *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_typeinfo.h(116,7):remark #24003: std::bad_cast::bad_cast(std::bad_cast *, const std::bad_cast &): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xfacet(24,3):remark #24003: std::_Facet_base::~_Facet_base(std::_Facet_base *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xiosbase(219,8):remark #24003: std::ios_base::failure::failure(std::ios_base::failure *, const std::ios_base::failure &): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xiosbase(219,8):remark #24003: std::ios_base::failure::~failure(std::ios_base::failure *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xiosbase(282,3):remark #24003: std::ios_base::clear(std::ios_base *, std::ios_base::iostate, bool): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(149,4):remark #24003: std::locale::facet::_Incref(std::locale::facet *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(154,4):remark #24003: std::locale::facet::_Decref(std::locale::facet *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(171,4):remark #24003: std::locale::facet::~facet(std::locale::facet *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(430,3):remark #24003: std::locale::~locale(std::locale *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(2107,3):remark #24003: std::ctype_base::~ctype_base(std::ctype_base *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(2468,3):remark #24003: std::ctype<char>::_Getcat(const std::locale::facet **, const std::locale *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(2511,3):remark #24003: std::ctype<char>::do_tolower(const std::ctype<char> *, std::ctype<char>::_Elem) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(2517,3):remark #24003: std::ctype<char>::do_tolower(const std::ctype<char> *, std::ctype<char>::_Elem *, const std::ctype<char>::_Elem *) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(2525,3):remark #24003: std::ctype<char>::do_toupper(const std::ctype<char> *, std::ctype<char>::_Elem) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(2531,3):remark #24003: std::ctype<char>::do_toupper(const std::ctype<char> *, std::ctype<char>::_Elem *, const std::ctype<char>::_Elem *) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(2539,3):remark #24003: std::ctype<char>::do_widen(const std::ctype<char> *, char) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(2545,3):remark #24003: std::ctype<char>::do_widen(const std::ctype<char> *, const char *, const char *, std::ctype<char>::_Elem *) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(2552,3):remark #24003: std::ctype<char>::do_narrow(const std::ctype<char> *, std::ctype<char>::_Elem, char) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocale(2558,3):remark #24003: std::ctype<char>::do_narrow(const std::ctype<char> *, const std::ctype<char>::_Elem *, const std::ctype<char>::_Elem *, char, char *) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocinfo(94,3):remark #24003: std::_Locinfo::~_Locinfo(std::_Locinfo *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(98,3):remark #24003: std::numpunct<char>::grouping(const std::numpunct<char> *, std::string *) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(103,3):remark #24003: std::numpunct<char>::falsename(const std::numpunct<char> *, std::numpunct<char>::string_type *) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(108,3):remark #24003: std::numpunct<char>::truename(const std::numpunct<char> *, std::numpunct<char>::string_type *) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(125,3):remark #24003: std::numpunct<char>::numpunct(std::numpunct<char> *, const std::_Locinfo &, size_t, bool): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(131,3):remark #24003: std::numpunct<char>::_Getcat(const std::locale::facet **, const std::locale *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(196,3):remark #24003: std::numpunct<char>::do_decimal_point(const std::numpunct<char> *) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(201,3):remark #24003: std::numpunct<char>::do_thousands_sep(const std::numpunct<char> *) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(206,3):remark #24003: std::numpunct<char>::do_grouping(const std::numpunct<char> *, std::string *) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(211,3):remark #24003: std::numpunct<char>::do_falsename(const std::numpunct<char> *, std::numpunct<char>::string_type *) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(216,3):remark #24003: std::numpunct<char>::do_truename(const std::numpunct<char> *, std::numpunct<char>::string_type *) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(222,3):remark #24003: std::numpunct<char>::_Tidy(std::numpunct<char> *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(1129,3):remark #24003: std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>::_Getcat(const std::locale::facet **, const std::locale *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(1218,3):remark #24003: std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>::do_put(const std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>> *, std::ostreambuf_iterator<char, std::char_traits<char>> *, std::ostreambuf_iterator<char, std::char_traits<char>>, std::ios_base &, char, bool) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(1248,3):remark #24003: std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>::do_put(const std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>> *, std::ostreambuf_iterator<char, std::char_traits<char>> *, std::ostreambuf_iterator<char, std::char_traits<char>>, std::ios_base &, char, long) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(1258,3):remark #24003: std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>::do_put(const std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>> *, std::ostreambuf_iterator<char, std::char_traits<char>> *, std::ostreambuf_iterator<char, std::char_traits<char>>, std::ios_base &, char, unsigned long) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(1269,3):remark #24003: std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>::do_put(const std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>> *, std::ostreambuf_iterator<char, std::char_traits<char>> *, std::ostreambuf_iterator<char, std::char_traits<char>>, std::ios_base &, char, __int64) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(1279,3):remark #24003: std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>::do_put(const std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>> *, std::ostreambuf_iterator<char, std::char_traits<char>> *, std::ostreambuf_iterator<char, std::char_traits<char>>, std::ios_base &, char, unsigned __int64) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(1290,3):remark #24003: std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>::do_put(const std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>> *, std::ostreambuf_iterator<char, std::char_traits<char>> *, std::ostreambuf_iterator<char, std::char_traits<char>>, std::ios_base &, char, double) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(1314,3):remark #24003: std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>::do_put(const std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>> *, std::ostreambuf_iterator<char, std::char_traits<char>> *, std::ostreambuf_iterator<char, std::char_traits<char>>, std::ios_base &, char, long double) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(1338,3):remark #24003: std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>::do_put(const std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>> *, std::ostreambuf_iterator<char, std::char_traits<char>> *, std::ostreambuf_iterator<char, std::char_traits<char>>, std::ios_base &, char, const void *) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(1378,3):remark #24003: std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>::_Fput(const std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>> *, std::ostreambuf_iterator<char, std::char_traits<char>> *, std::ostreambuf_iterator<char, std::char_traits<char>>, std::ios_base &, char, const char *, size_t) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xlocnum(1480,3):remark #24003: std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>::_Iput(const std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>> *, std::ostreambuf_iterator<char, std::char_traits<char>> *, std::ostreambuf_iterator<char, std::char_traits<char>>, std::ios_base &, char, char *, size_t) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0(899,3):remark #24003: std::_Wrap_alloc<std::_String_base_types<char, std::allocator<char>>::_Alloc>::allocate(std::_Wrap_alloc<std::_String_base_types<char, std::allocator<char>>::_Alloc> *, std::_Wrap_alloc<std::_String_base_types<char, std::allocator<char>>::_Alloc>::size_type): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(679,3):remark #24003: std::_String_alloc<std::_String_base_types<char, std::allocator<char>>>::_Getal(std::_String_alloc<std::_String_base_types<char, std::allocator<char>>> *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(684,3):remark #24003: std::_String_alloc<std::_String_base_types<char, std::allocator<char>>>::_Getal(const std::_String_alloc<std::_String_base_types<char, std::allocator<char>>> *) const: profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(768,3):remark #24003: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *, const std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Myt &): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(935,3):remark #24003: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Myt &&): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(950,3):remark #24003: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Assign_rv(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Myt &&): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(1005,3):remark #24003: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(1012,3):remark #24003: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::operator=(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *, const std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Myt &): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(1078,3):remark #24003: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::append(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *, const char *, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(1140,3):remark #24003: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *, const std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Myt &, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(1274,3):remark #24003: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::insert(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type, char): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(1765,3):remark #24003: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::resize(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type, char): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2164,3):remark #24003: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Copy(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2205,3):remark #24003: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Grow(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type, bool): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2229,3):remark #24003: std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Tidy(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *, bool, std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xutility(3644,3):remark #24003: std::_Yarn<char>::~_Yarn(std::_Yarn<char> *): profile feedback used a static estimate profile
+I:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xutility(3644,3):remark #24003: std::_Yarn<__wchar_t>::~_Yarn(std::_Yarn<__wchar_t> *): profile feedback used a static estimate profile
+I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\main.cpp(7,1):remark #24003: main(): profile feedback used a static estimate profile
+
+  0 out of 101 routine(s) used training profile data for PGO feedback
+  0 out of 101 routine(s) were unable to use training profile data for PGO feedback
+  0 out of 101 routine(s) were unable to find training profile data for PGO feedback
+  101 out of 101 routine(s) used a static estimate profile for PGO feedback
+
+
+

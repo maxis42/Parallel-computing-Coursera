@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02_EvenOdd", "02_EvenOdd\02_EvenOdd.vcproj", "{168B31E3-C525-43A8-8561-748E64B139D3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_Blocks", "03_Blocks\03_Blocks.vcproj", "{901C4FA7-9B03-4A37-99A2-CE29AC0C9CBB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01_EqualPartition", "01_EqualPartition\01_EqualPartition.vcproj", "{D61C714B-C956-49A2-B228-7490C2C2DA1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{168B31E3-C525-43A8-8561-748E64B139D3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{168B31E3-C525-43A8-8561-748E64B139D3}.Debug|Win32.Build.0 = Debug|Win32
+		{168B31E3-C525-43A8-8561-748E64B139D3}.Release|Win32.ActiveCfg = Release|Win32
+		{168B31E3-C525-43A8-8561-748E64B139D3}.Release|Win32.Build.0 = Release|Win32
+		{901C4FA7-9B03-4A37-99A2-CE29AC0C9CBB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{901C4FA7-9B03-4A37-99A2-CE29AC0C9CBB}.Debug|Win32.Build.0 = Debug|Win32
+		{901C4FA7-9B03-4A37-99A2-CE29AC0C9CBB}.Release|Win32.ActiveCfg = Release|Win32
+		{901C4FA7-9B03-4A37-99A2-CE29AC0C9CBB}.Release|Win32.Build.0 = Release|Win32
+		{D61C714B-C956-49A2-B228-7490C2C2DA1A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D61C714B-C956-49A2-B228-7490C2C2DA1A}.Debug|Win32.Build.0 = Debug|Win32
+		{D61C714B-C956-49A2-B228-7490C2C2DA1A}.Release|Win32.ActiveCfg = Release|Win32
+		{D61C714B-C956-49A2-B228-7490C2C2DA1A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

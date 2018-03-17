@@ -1,0 +1,114 @@
+-r
+H:\работа\MOOC\Практика\4.4_vec_example2\example2_vec\My Amplifier XE Results - example2_vec\r000hs
+--data-limit-mb=500
+--stack-stitching
+--follow-child
+--itt-config=frame
+--stackwalk=offline
+--type=cswitch
+--mrte-mode=native
+--type=cpu:counters:nostack
+--type=cpu:stack
+--interval=10
+--search-dir
+sym=H:\работа\MOOC\Практика\4.4_vec_example2\Release
+--search-dir
+sym=H:\работа\MOOC\Практика\4.4_vec_example2
+--search-dir
+sym=srv*C:\Windows\symbols
+--search-dir
+sym=srv*C:\Windows\symbols*http://msdl.microsoft.com/download/symbols
+--search-dir
+bin=H:\работа\MOOC\Практика\4.4_vec_example2\Release
+--search-dir
+bin=H:\работа\MOOC\Практика\4.4_vec_example2
+--search-dir
+bin=H:/работа\MOOC\Практика\4.4_vec_example2\example2_vec\$(VC_ExecutablePath_x86)
+--search-dir
+bin=H:/работа\MOOC\Практика\4.4_vec_example2\example2_vec\$(WindowsSDK_ExecutablePath)
+--search-dir
+bin=H:/работа\MOOC\Практика\4.4_vec_example2\example2_vec\$(VS_ExecutablePath)
+--search-dir
+bin=H:/работа\MOOC\Практика\4.4_vec_example2\example2_vec\$(MSBuild_ExecutablePath)
+--search-dir
+bin=C:\Windows\SysWow64
+--search-dir
+bin=H:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Static Analysis Tools\FxCop
+--search-dir
+bin=H:\Program Files (x86)\Intel_sw_development_tools\Trace Analyzer and Collector\9.1.0.007\bin
+--search-dir
+bin=H:\Program Files (x86)\Intel_sw_development_tools\compilers_and_libraries_2016.0.063\windows\mpi\intel64\bin
+--search-dir
+bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\mpirt
+--search-dir
+bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\mpirt
+--search-dir
+bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler
+--search-dir
+bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\compiler
+--search-dir
+bin=C:\ProgramData\Oracle\Java\javapath
+--search-dir
+bin=C:\Python27\Lib\site-packages\PyQt4
+--search-dir
+bin=G:\Program Files (x86)\Embarcadero\RAD Studio\12.0\bin
+--search-dir
+bin=C:\Users\Public\Documents\RAD Studio\12.0\Bpl
+--search-dir
+bin=G:\Program Files (x86)\Embarcadero\RAD Studio\12.0\bin64
+--search-dir
+bin=C:\Users\Public\Documents\RAD Studio\12.0\Bpl\Win64
+--search-dir
+bin=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common
+--search-dir
+bin=C:\Windows\system32
+--search-dir
+bin=C:\Windows
+--search-dir
+bin=C:\Windows\System32\Wbem
+--search-dir
+bin=C:\Windows\System32\WindowsPowerShell\v1.0
+--search-dir
+bin=d:\Program Files\MATLAB\R2013a\runtime\win64
+--search-dir
+bin=d:\Program Files\MATLAB\R2013a\bin
+--search-dir
+bin=C:\Program Files\Common Files\Autodesk Shared
+--search-dir
+bin=H:\Program Files (x86)\MiKTeX 2.9\miktex\bin
+--search-dir
+bin=C:\Python27
+--search-dir
+bin=C:\Python27\DLLs
+--search-dir
+bin=C:\Python27\Scripts
+--search-dir
+bin=C:\Python27\Lib\site-packages\vtk
+--search-dir
+bin=C:\Python27\gnuplot\binary
+--search-dir
+bin=C:\Python27\Lib\site-packages\osgeo
+--search-dir
+bin=H:\Program Files (x86)\pythonxy\SciTE-3.3.2-3
+--search-dir
+bin=H:\Program Files (x86)\pythonxy\console
+--search-dir
+bin=C:\MinGW32-xy\bin
+--search-dir
+bin=H:\Program Files (x86)\pythonxy\swig
+--search-dir
+bin=H:\Program Files (x86)\pythonxy\gettext\bin
+--search-dir
+bin=C:\Program Files\Microsoft SQL Server\110\Tools\Binn
+--search-dir
+bin=C:\Program Files (x86)\Skype\Phone
+--search-dir
+bin=C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit
+--search-dir
+bin=C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0
+--search-dir
+bin=C:\Program Files\Microsoft SQL Server\120\Tools\Binn
+--search-dir
+bin=H:\Program Files (x86)\Intel_sw_development_tools\Trace Analyzer and Collector\9.1.0.007\dll
+--
+H:\работа\MOOC\Практика\4.4_vec_example2\Release\example2_vec.exe

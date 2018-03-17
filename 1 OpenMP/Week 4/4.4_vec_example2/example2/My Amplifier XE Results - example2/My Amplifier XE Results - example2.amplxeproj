@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <connectionOption>localhost</connectionOption>
+ <rdmgr>
+  <timestamp type="u64_t">1440308899</timestamp>
+  <hostname>nik-pc</hostname>
+  <os>windows</os>
+  <product>Intel® VTune™ Amplifier XE 2016 Beta Update 1</product>
+  <buildNumber type="s32_t">414512</buildNumber>
+  <logicalCPUCount type="s32_t">8</logicalCPUCount>
+  <CPUFrequency type="s64_t">3500000000</CPUFrequency>
+ </rdmgr>
+ <All_Configurations-All_Platforms>
+  <target_settings>
+   <selected_workload>
+    <localhost>launch</localhost>
+   </selected_workload>
+   <result_dir>
+    <localhost>H:\работа\MOOC\Практика\4.4_vec_example2\example2\My Amplifier XE Results - example2</localhost>
+   </result_dir>
+   <workloads>
+    <localhost>
+     <attach type="pointer" type_id="dasID_cctrl2::AttachWorkload" ptr_type="dasID_cctrl2::IWorkload">
+      <workload>
+       <targetName>attach</targetName>
+       <use_app_dir_as_work_dir type="bool">false</use_app_dir_as_work_dir>
+       <attach.process_name>example2.exe</attach.process_name>
+       <attach.pid type="null"></attach.pid>
+       <result_directory.path>H:\работа\MOOC\Практика\4.4_vec_example2\example2\My Amplifier XE Results - example2\r@@@{at}</result_directory.path>
+       <search_directories>
+        <item>
+         <value>sym=H:\работа\MOOC\Практика\4.4_vec_example2\Release</value>
+        </item>
+        <item>
+         <value>sym=H:\работа\MOOC\Практика\4.4_vec_example2</value>
+        </item>
+        <item>
+         <value>sym=srv*C:\Windows\symbols</value>
+        </item>
+        <item>
+         <value>sym=srv*C:\Windows\symbols*http://msdl.microsoft.com/download/symbols</value>
+        </item>
+        <item>
+         <value>bin=H:\работа\MOOC\Практика\4.4_vec_example2\Release</value>
+        </item>
+        <item>
+         <value>bin=H:\работа\MOOC\Практика\4.4_vec_example2</value>
+        </item>
+        <item>
+         <value>bin=H:/работа\MOOC\Практика\4.4_vec_example2\example2\$(VC_ExecutablePath_x86)</value>
+        </item>
+        <item>
+         <value>bin=H:/работа\MOOC\Практика\4.4_vec_example2\example2\$(WindowsSDK_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=H:/работа\MOOC\Практика\4.4_vec_example2\example2\$(VS_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=H:/работа\MOOC\Практика\4.4_vec_example2\example2\$(MSBuild_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\SysWow64</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Static Analysis Tools\FxCop</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\Intel_sw_development_tools\Trace Analyzer and Collector\9.1.0.007\bin</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\Intel_sw_development_tools\compilers_and_libraries_2016.0.063\windows\mpi\intel64\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\mpirt</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\mpirt</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\compiler</value>
+        </item>
+        <item>
+         <value>bin=C:\ProgramData\Oracle\Java\javapath</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\Lib\site-packages\PyQt4</value>
+        </item>
+        <item>
+         <value>bin=G:\Program Files (x86)\Embarcadero\RAD Studio\12.0\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\Public\Documents\RAD Studio\12.0\Bpl</value>
+        </item>
+        <item>
+         <value>bin=G:\Program Files (x86)\Embarcadero\RAD Studio\12.0\bin64</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\Public\Documents\RAD Studio\12.0\Bpl\Win64</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\system32</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\System32\Wbem</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\System32\WindowsPowerShell\v1.0</value>
+        </item>
+        <item>
+         <value>bin=d:\Program Files\MATLAB\R2013a\runtime\win64</value>
+        </item>
+        <item>
+         <value>bin=d:\Program Files\MATLAB\R2013a\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Common Files\Autodesk Shared</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\MiKTeX 2.9\miktex\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\DLLs</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\Scripts</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\Lib\site-packages\vtk</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\gnuplot\binary</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\Lib\site-packages\osgeo</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\pythonxy\SciTE-3.3.2-3</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\pythonxy\console</value>
+        </item>
+        <item>
+         <value>bin=C:\MinGW32-xy\bin</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\pythonxy\swig</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\pythonxy\gettext\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft SQL Server\110\Tools\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Skype\Phone</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft SQL Server\120\Tools\Binn</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\Intel_sw_development_tools\Trace Analyzer and Collector\9.1.0.007\dll</value>
+        </item>
+       </search_directories>
+       <context>
+        <contextValue>
+         <id>allowMultipleRuns</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>analyzeKvmGuest</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>analyzeSystemWide</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>cpuMask</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>customCollector</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>dataLimit</id>
+         <value type="s32_t">500</value>
+        </contextValue>
+        <contextValue>
+         <id>followChild</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>followChildStrategy</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>goodFastFrameThreshold</id>
+         <value type="double">100</value>
+        </contextValue>
+        <contextValue>
+         <id>kvmGuestKallsyms</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>kvmGuestModules</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>kvmProfileGuest</id>
+         <value type="null"></value>
+        </contextValue>
+        <contextValue>
+         <id>mrteMode</id>
+         <value>auto</value>
+        </contextValue>
+        <contextValue>
+         <id>slowGoodFrameThreshold</id>
+         <value type="double">40</value>
+        </contextValue>
+        <contextValue>
+         <id>targetDurationType</id>
+         <value>short</value>
+        </contextValue>
+        <contextValue>
+         <id>targetType</id>
+         <value>attach</value>
+        </contextValue>
+       </context>
+      </workload>
+     </attach>
+     <launch type="pointer" type_id="dasID_cctrl2::ApplicationWorkload" ptr_type="dasID_cctrl2::IWorkload">
+      <workload>
+       <targetName>launch</targetName>
+       <launch_app.inherit_sys_environment type="bool">true</launch_app.inherit_sys_environment>
+       <launch_app.app_to_launch>H:\работа\MOOC\Практика\4.4_vec_example2\Release\example2.exe</launch_app.app_to_launch>
+       <launch_app.working_folder>H:\работа\MOOC\Практика\4.4_vec_example2\example2</launch_app.working_folder>
+       <launch_app.app_parameters></launch_app.app_parameters>
+       <launch_app.environment>PATH=H:\Program Files (x86)\Intel_sw_development_tools\compilers_and_libraries_2016\windows\redist\ia32\compiler;%PATH%&#13;
+PATH=H:\Program Files (x86)\Intel_sw_development_tools\compilers_and_libraries_2016\windows\redist\ia32\compiler;%PATH%&#13;
+&#13;
+    &#13;
+    </launch_app.environment>
+       <launch_app.environment_prepend>PATH=H:\Program Files (x86)\Intel_sw_development_tools\compilers_and_libraries_2016\windows\redist\ia32\compiler;</launch_app.environment_prepend>
+       <use_app_dir_as_work_dir type="bool">false</use_app_dir_as_work_dir>
+       <result_directory.path>H:\работа\MOOC\Практика\4.4_vec_example2\example2\My Amplifier XE Results - example2\r@@@{at}</result_directory.path>
+       <search_directories>
+        <item>
+         <value>sym=H:\работа\MOOC\Практика\4.4_vec_example2\Release</value>
+        </item>
+        <item>
+         <value>sym=H:\работа\MOOC\Практика\4.4_vec_example2</value>
+        </item>
+        <item>
+         <value>sym=srv*C:\Windows\symbols</value>
+        </item>
+        <item>
+         <value>sym=srv*C:\Windows\symbols*http://msdl.microsoft.com/download/symbols</value>
+        </item>
+        <item>
+         <value>bin=H:\работа\MOOC\Практика\4.4_vec_example2\Release</value>
+        </item>
+        <item>
+         <value>bin=H:\работа\MOOC\Практика\4.4_vec_example2</value>
+        </item>
+        <item>
+         <value>bin=H:/работа\MOOC\Практика\4.4_vec_example2\example2\$(VC_ExecutablePath_x86)</value>
+        </item>
+        <item>
+         <value>bin=H:/работа\MOOC\Практика\4.4_vec_example2\example2\$(WindowsSDK_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=H:/работа\MOOC\Практика\4.4_vec_example2\example2\$(VS_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=H:/работа\MOOC\Практика\4.4_vec_example2\example2\$(MSBuild_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\SysWow64</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Static Analysis Tools\FxCop</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\Intel_sw_development_tools\Trace Analyzer and Collector\9.1.0.007\bin</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\Intel_sw_development_tools\compilers_and_libraries_2016.0.063\windows\mpi\intel64\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\mpirt</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\mpirt</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\compiler</value>
+        </item>
+        <item>
+         <value>bin=C:\ProgramData\Oracle\Java\javapath</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\Lib\site-packages\PyQt4</value>
+        </item>
+        <item>
+         <value>bin=G:\Program Files (x86)\Embarcadero\RAD Studio\12.0\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\Public\Documents\RAD Studio\12.0\Bpl</value>
+        </item>
+        <item>
+         <value>bin=G:\Program Files (x86)\Embarcadero\RAD Studio\12.0\bin64</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\Public\Documents\RAD Studio\12.0\Bpl\Win64</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\system32</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\System32\Wbem</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\System32\WindowsPowerShell\v1.0</value>
+        </item>
+        <item>
+         <value>bin=d:\Program Files\MATLAB\R2013a\runtime\win64</value>
+        </item>
+        <item>
+         <value>bin=d:\Program Files\MATLAB\R2013a\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Common Files\Autodesk Shared</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\MiKTeX 2.9\miktex\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\DLLs</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\Scripts</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\Lib\site-packages\vtk</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\gnuplot\binary</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\Lib\site-packages\osgeo</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\pythonxy\SciTE-3.3.2-3</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\pythonxy\console</value>
+        </item>
+        <item>
+         <value>bin=C:\MinGW32-xy\bin</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\pythonxy\swig</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\pythonxy\gettext\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft SQL Server\110\Tools\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Skype\Phone</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft SQL Server\120\Tools\Binn</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\Intel_sw_development_tools\Trace Analyzer and Collector\9.1.0.007\dll</value>
+        </item>
+       </search_directories>
+       <context>
+        <contextValue>
+         <id>allowMultipleRuns</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>analyzeKvmGuest</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>analyzeSystemWide</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>cpuMask</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>customCollector</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>dataLimit</id>
+         <value type="s32_t">500</value>
+        </contextValue>
+        <contextValue>
+         <id>determineMpiRank</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>followChild</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>followChildStrategy</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>goodFastFrameThreshold</id>
+         <value type="double">100</value>
+        </contextValue>
+        <contextValue>
+         <id>kvmGuestKallsyms</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>kvmGuestModules</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>kvmProfileGuest</id>
+         <value type="null"></value>
+        </contextValue>
+        <contextValue>
+         <id>mrteMode</id>
+         <value>native</value>
+        </contextValue>
+        <contextValue>
+         <id>slowGoodFrameThreshold</id>
+         <value type="double">40</value>
+        </contextValue>
+        <contextValue>
+         <id>targetDurationType</id>
+         <value>short</value>
+        </contextValue>
+        <contextValue>
+         <id>targetType</id>
+         <value>launch</value>
+        </contextValue>
+       </context>
+      </workload>
+     </launch>
+     <system type="pointer" type_id="dasID_cctrl2::SystemWideWorkload" ptr_type="dasID_cctrl2::IWorkload">
+      <workload>
+       <targetName>system</targetName>
+       <use_app_dir_as_work_dir type="bool">false</use_app_dir_as_work_dir>
+       <result_directory.path>H:\работа\MOOC\Практика\4.4_vec_example2\example2\My Amplifier XE Results - example2\r@@@{at}</result_directory.path>
+       <search_directories>
+        <item>
+         <value>sym=H:\работа\MOOC\Практика\4.4_vec_example2\Release</value>
+        </item>
+        <item>
+         <value>sym=H:\работа\MOOC\Практика\4.4_vec_example2</value>
+        </item>
+        <item>
+         <value>sym=srv*C:\Windows\symbols</value>
+        </item>
+        <item>
+         <value>sym=srv*C:\Windows\symbols*http://msdl.microsoft.com/download/symbols</value>
+        </item>
+        <item>
+         <value>bin=H:\работа\MOOC\Практика\4.4_vec_example2\Release</value>
+        </item>
+        <item>
+         <value>bin=H:\работа\MOOC\Практика\4.4_vec_example2</value>
+        </item>
+        <item>
+         <value>bin=H:/работа\MOOC\Практика\4.4_vec_example2\example2\$(VC_ExecutablePath_x86)</value>
+        </item>
+        <item>
+         <value>bin=H:/работа\MOOC\Практика\4.4_vec_example2\example2\$(WindowsSDK_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=H:/работа\MOOC\Практика\4.4_vec_example2\example2\$(VS_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=H:/работа\MOOC\Практика\4.4_vec_example2\example2\$(MSBuild_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\SysWow64</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Static Analysis Tools\FxCop</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\Intel_sw_development_tools\Trace Analyzer and Collector\9.1.0.007\bin</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\Intel_sw_development_tools\compilers_and_libraries_2016.0.063\windows\mpi\intel64\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\mpirt</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\mpirt</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\compiler</value>
+        </item>
+        <item>
+         <value>bin=C:\ProgramData\Oracle\Java\javapath</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\Lib\site-packages\PyQt4</value>
+        </item>
+        <item>
+         <value>bin=G:\Program Files (x86)\Embarcadero\RAD Studio\12.0\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\Public\Documents\RAD Studio\12.0\Bpl</value>
+        </item>
+        <item>
+         <value>bin=G:\Program Files (x86)\Embarcadero\RAD Studio\12.0\bin64</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\Public\Documents\RAD Studio\12.0\Bpl\Win64</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\system32</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\System32\Wbem</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\System32\WindowsPowerShell\v1.0</value>
+        </item>
+        <item>
+         <value>bin=d:\Program Files\MATLAB\R2013a\runtime\win64</value>
+        </item>
+        <item>
+         <value>bin=d:\Program Files\MATLAB\R2013a\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Common Files\Autodesk Shared</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\MiKTeX 2.9\miktex\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\DLLs</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\Scripts</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\Lib\site-packages\vtk</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\gnuplot\binary</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\Lib\site-packages\osgeo</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\pythonxy\SciTE-3.3.2-3</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\pythonxy\console</value>
+        </item>
+        <item>
+         <value>bin=C:\MinGW32-xy\bin</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\pythonxy\swig</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\pythonxy\gettext\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft SQL Server\110\Tools\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Skype\Phone</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft SQL Server\120\Tools\Binn</value>
+        </item>
+        <item>
+         <value>bin=H:\Program Files (x86)\Intel_sw_development_tools\Trace Analyzer and Collector\9.1.0.007\dll</value>
+        </item>
+       </search_directories>
+       <context>
+        <contextValue>
+         <id>allowMultipleRuns</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>analyzeKvmGuest</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>cpuMask</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>customCollector</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>dataLimit</id>
+         <value type="s32_t">500</value>
+        </contextValue>
+        <contextValue>
+         <id>followChild</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>goodFastFrameThreshold</id>
+         <value type="double">100</value>
+        </contextValue>
+        <contextValue>
+         <id>kvmGuestKallsyms</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>kvmGuestModules</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>kvmProfileGuest</id>
+         <value type="null"></value>
+        </contextValue>
+        <contextValue>
+         <id>mrteMode</id>
+         <value>native</value>
+        </contextValue>
+        <contextValue>
+         <id>slowGoodFrameThreshold</id>
+         <value type="double">40</value>
+        </contextValue>
+        <contextValue>
+         <id>targetDurationType</id>
+         <value>short</value>
+        </contextValue>
+        <contextValue>
+         <id>targetType</id>
+         <value>system</value>
+        </contextValue>
+       </context>
+      </workload>
+     </system>
+    </localhost>
+   </workloads>
+   <result_pattern>
+    <localhost>r@@@{at}</localhost>
+   </result_pattern>
+  </target_settings>
+  <analysis_type_settings>
+   <selected_analysis_type_path>H:\Program Files (x86)\Intel_sw_development_tools\VTune Amplifier XE 2016\config\analysis_type\basic_hotspots.cfg</selected_analysis_type_path>
+  </analysis_type_settings>
+ </All_Configurations-All_Platforms>
+ <engine>
+  <knobs>
+   <frameThreshold>
+&lt;bag xmlns:double=&quot;http://www.intel.com/2001/XMLSchema#double&quot;&gt;
+ &lt;minValueThresholds domain=&quot;&quot;&gt;
+  &lt;double:minValueThreshold name=&quot;%SlowFrame&quot;&gt;0&lt;/double:minValueThreshold&gt;
+  &lt;double:minValueThreshold name=&quot;%GoodFrame&quot;&gt;40&lt;/double:minValueThreshold&gt;
+  &lt;double:minValueThreshold name=&quot;%FastFrame&quot;&gt;100&lt;/double:minValueThreshold&gt;
+ &lt;/minValueThresholds&gt;
+&lt;/bag&gt;
+</frameThreshold>
+   <utilizationThreshold>&lt;bag xmlns:double=&quot;http://www.w3.org/2001/XMLSchema#double&quot;
+                  xmlns:boolean=&quot;http://www.w3.org/2001/XMLSchema#boolean&quot;&gt;
+          &lt;minValueThresholds boolean:scaled=&quot;true&quot;&gt;
+            &lt;double:minValueThreshold name=&quot;%Idle&quot;&gt;-1&lt;/double:minValueThreshold&gt;
+            &lt;double:minValueThreshold name=&quot;%Poor&quot;&gt;0.0000001&lt;/double:minValueThreshold&gt;
+            &lt;double:minValueThreshold name=&quot;%Ok&quot;&gt;0.5001&lt;/double:minValueThreshold&gt;
+            &lt;double:minValueThreshold name=&quot;%Ideal&quot;&gt;0.85&lt;/double:minValueThreshold&gt;
+            &lt;double:minValueThreshold name=&quot;%Over&quot;&gt;1.15&lt;/double:minValueThreshold&gt;
+          &lt;/minValueThresholds&gt;
+        &lt;/bag&gt;</utilizationThreshold>
+   <taskThreshold>
+&lt;bag xmlns:double=&quot;http://www.intel.com/2001/XMLSchema#double&quot;&gt;
+ &lt;minValueThresholds domain=&quot;&quot;&gt;
+  &lt;double:minValueThreshold name=&quot;%FastTask&quot;&gt;0&lt;/double:minValueThreshold&gt;
+  &lt;double:minValueThreshold name=&quot;%GoodTask&quot;&gt;0.20000000000000001&lt;/double:minValueThreshold&gt;
+  &lt;double:minValueThreshold name=&quot;%SlowTask&quot;&gt;0.80000000000000004&lt;/double:minValueThreshold&gt;
+ &lt;/minValueThresholds&gt;
+&lt;/bag&gt;
+</taskThreshold>
+  </knobs>
+ </engine>
+ <contextValues>
+  <contextValue>
+   <id>emulatorByCtxKnob</id>
+   <value></value>
+  </contextValue>
+ </contextValues>
+</root>

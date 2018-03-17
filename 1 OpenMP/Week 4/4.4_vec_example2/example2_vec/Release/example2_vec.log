@@ -1,0 +1,14 @@
+﻿Build started 09.10.2015 17:55:17.
+     1>Project "I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\example2_vec.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         I:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016\windows\bin\intel64\icl.exe /c /Qm32 /Zi /nologo /W3 /O2 /Oi /Qipo /Qftz /D __INTEL_COMPILER=1600 /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /EHsc /MD /GS /Gy /Qopenmp-offload /Zc:wchar_t /Zc:forScope /Qopenmp /Fo"Release\\" /Fd"Release\vc140.pdb" /Qopt-report:2 /Qopt-report-format:vs /Gd /TP main.cpp
+       icl: : message #10346: optimization reporting will be enabled at link time when performing interprocedural optimizations
+         main.cpp
+       Link:
+         I:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016\windows\bin\intel64\xilink.exe -qm32 /OUT:"I:\Работа\MOOC\Практика\4.4_vec_example2\Release\example2_vec.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"I:\Работа\MOOC\Практика\4.4_vec_example2\Release\example2_vec.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"I:\Работа\MOOC\Практика\4.4_vec_example2\Release\example2_vec.lib" /MACHINE:X86 /SAFESEH Release\main.obj
+         example2_vec.vcxproj -> I:\Работа\MOOC\Практика\4.4_vec_example2\Release\example2_vec.exe
+     1>Done Building Project "I:\Работа\MOOC\Практика\4.4_vec_example2\example2_vec\example2_vec.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.52

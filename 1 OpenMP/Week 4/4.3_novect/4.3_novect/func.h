@@ -1,0 +1,1 @@
+void add_floats(float *a, float *b, float *c, float *d, float *e, int n);
