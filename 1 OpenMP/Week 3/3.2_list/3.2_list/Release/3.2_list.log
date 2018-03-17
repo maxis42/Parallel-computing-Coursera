@@ -1,9 +1,2 @@
-﻿Build started 28.03.2016 11:37:37.
-     1>Project "I:\Работа\MOOC\Практика\Окончательные примеры\3.2_list\3.2_list\3.2_list.vcxproj" on node 2 (Clean target(s)).
-     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppClean.targets(76,5): warning : Access to the path 'c:\windows\tracing\intelremotemonagent2_rasapi32.log' is denied.
-     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppClean.targets(76,5): warning : Access to the path 'c:\windows\tracing\intelremotemonagent2_rasmancs.log' is denied.
-     1>Done Building Project "I:\Работа\MOOC\Практика\Окончательные примеры\3.2_list\3.2_list\3.2_list.vcxproj" (Clean target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:00.30
+﻿  main.cpp
+  3.2_list.vcxproj -> D:\Parallel-computing-Coursera\1 OpenMP\Week 3\3.2_list\Release\3.2_list.exe

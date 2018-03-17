@@ -19,8 +19,8 @@ int main(int argc, char **argv)
 	
 	setlocale(LC_ALL, "Russian");
 	
-	int N = 1000; // Количество точек сетки по каждой размерности
-	double eps = 0.01; // Точность вычислений
+	int N = 600; // Количество точек сетки по каждой размерности
+	double eps = 0.0001; // Точность вычислений
 	int IterCnt; // Количество итераций
 	double tt;
 
@@ -54,7 +54,7 @@ int main(int argc, char **argv)
 
 
 	
-//	Submit_Part1(N,eps,Calc_seq);
+	Submit_Part1(N,eps,Calc_seq);
 	
 //	Submit_Part2(Calc_par);
 

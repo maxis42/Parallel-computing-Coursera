@@ -1,8 +1,9 @@
-﻿Build started 15.12.2015 19:21:01.
-     1>Project "I:\Работа\MOOC\Практика\Итоговая\Модуль 3\Ex2\GaussSeidel\GaussSeidel.vcxproj" on node 2 (Clean target(s)).
-     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppClean.targets(76,5): warning : Access to the path 'c:\windows\tracing\intelremotemonagent2_rasapi32.log' is denied.
-     1>Done Building Project "I:\Работа\MOOC\Практика\Итоговая\Модуль 3\Ex2\GaussSeidel\GaussSeidel.vcxproj" (Clean target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:00.08
+﻿  calc_par.cpp
+  calc_seq.cpp
+  init.cpp
+init.cpp(14): warning #1011: missing return statement at end of non-void function "G"
+    }
+    ^
+  
+  main.cpp
+  GaussSeidel.vcxproj -> D:\Parallel-computing-Coursera\1 OpenMP\Week 3\Exercise2_OpenMP\Ex2\Release\GaussSeidel.exe

@@ -7,7 +7,7 @@ using namespace std;
 // Элемент списка
 struct node {
 	int number; // Любое целое число
-	unsigned long int fib_number; // Число Фибоначи 
+	unsigned long int fib_number; // Число Фибоначчи 
 	struct node* next; // Указатель на следующий элемент списка
 //	node* next; // Указатель на следующий элемент списка
 };
@@ -49,7 +49,7 @@ struct node* init_list(int n)
 	list = head_list;
 	list->number = 10;
 	list->fib_number = 0;
-	for (int i = 1; i< n; i++) {
+	for (int i = 1; i < n; i++) {
 	//	temp = (struct node*)malloc(sizeof(struct node));
 		temp = new node();
 		list->next = temp;
@@ -69,15 +69,29 @@ int main(int argc, char *argv[]) {
 	const int n = 36; // Число элементов в списке
 	head_list = init_list(n); // Инициализация списка
 	
+	const int NUM_THREADS = 4;
+
 	double time = omp_get_wtime();
-	list = head_list;
+	#pragma omp parallel
+	#pragma omp for schedule(dynamic, 1)
+	for (int i = 0; i < n; i++) {
+		list = head_list;
+		for (int j = 0; j < i; j++) {
+			list = list->next;
+		}
+		independent_work(list);
+	}
+	time = omp_get_wtime() - time;
+
+	//list = head_list;
+	/*
 	while (list != NULL)   // Основной цикл по выполнению действий над элементами списка
 	{
 		independent_work(list);
 		list = list->next;
 	}
-	time = omp_get_wtime() - time;
-
+	*/
+	
 
 	list = head_list;
 	while (list != NULL)  // Вывод элементов списка и освобождение памяти
@@ -90,5 +104,6 @@ int main(int argc, char *argv[]) {
 	head_list = NULL;
 
 	cout << "Time=" << time << endl;
+	system("pause");
 }
 

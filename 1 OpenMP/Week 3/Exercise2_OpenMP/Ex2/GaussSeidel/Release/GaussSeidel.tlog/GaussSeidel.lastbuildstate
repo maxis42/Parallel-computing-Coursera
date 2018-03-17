@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=v4.0:PlatformToolSet=Intel C++ Compiler 18.0:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native64Bit:WindowsTargetPlatformVersion=10.0.16299.0
+Release|Win32|D:\Parallel-computing-Coursera\1 OpenMP\Week 3\Exercise2_OpenMP\Ex2\|
