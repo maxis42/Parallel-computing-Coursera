@@ -5,75 +5,81 @@
 
 using namespace std;
 
-// Последовательная функция реализующая блочный алгоритм Гаусса-Зейделя
-// Входные параметры: массиф неизвестных и краевых значений, массив правых частей, количество точек сетки по каждому направлению, точность вычислений
-int Calc_seq_block(double** u, double** f, int N, double eps)
-{
+// Block sequential algorithm of Gauss–Seidel method
+int Calc_seq_block(double** u, double** f, int N, double eps) {
 
-	double max = 0;
-	double h = 1.0 / (N + 1); // Шаг сетки
+	double max_err = 0; // Max error
+	double h = 1.0 / (N + 1); // Grid step
 
-	int IterCnt = 0; // Переменная хранящая количество выполненых итераций
-	int BlockSize = 20; // Переменная отвечающая за размерность блока, для которого выполняется обработка
-	int BlockCount; // Количество блоков
+	int IterCnt = 0; // Iterations counter
+	int BlockSize = 20; // Block size
+	int BlockCount; // Number of blocks
 
 	cout << fixed << setprecision(10);
 
-	if ((N) % BlockSize == 0) // Если количество точек по каждому из направлений сетки делится нацело на размер блока, то проводятся вычисления
-	{
-		BlockCount = (N) / BlockSize;
-		do
-		{
+	// Make calculations only if N % Blocksize == 0
+	if (N % BlockSize == 0) {
+		BlockCount = N / BlockSize;
+		do {
 			IterCnt++;
-			max = 0;
-			for (int IBlock = 0; IBlock < BlockCount; IBlock++) // Проход по блокам по направлению i
-				for (int JBlock = 0; JBlock < BlockCount; JBlock++)  // Проход по блокам по направлению j
-					for (int idx = 0; idx < BlockSize; idx++) // Проход по строчкам блока
-						for (int jdy = 0; jdy < BlockSize; jdy++) // Проход по столбцам блока
-						{
-							int i = 1 + IBlock*BlockSize + idx; // Вычисление глобального i индекса элемента
-							int j = 1 + JBlock*BlockSize + jdy; // Вычисление глобального j индекса элемента
-							double u0 = u[i][j];
-							u[i][j] = 0.25 * (u[i - 1][j] + u[i + 1][j] // Расчет в соотвествии с формулами Гаусса-Зейделя
-								+ u[i][j - 1] + u[i][j + 1] - h * h * f[i - 1][j - 1]);
-							double d = abs(u[i][j] - u0); // Расчет модуля разности нового вычисленного значения неизвестной переменной и значения с предыдущей итераций 
-							if (d > max) // Поиск максимальной ошибки
-								max = d;
+			max_err = 0;
+			for (int IBlock = 0; IBlock < BlockCount; IBlock++) // Iterate blocks by i
+				for (int JBlock = 0; JBlock < BlockCount; JBlock++)  // Iterate blocks by j
+					for (int idx = 0; idx < BlockSize; idx++) // Block rows i
+						for (int jdy = 0; jdy < BlockSize; jdy++) { // Block columns j
+							// True current element indices
+							int i = 1 + IBlock*BlockSize + idx;
+							int j = 1 + JBlock*BlockSize + jdy;
+
+							// Save previous value
+							double u_old = u[i][j];
+
+							// Gauss–Seidel method
+							u[i][j] = 0.25*(u[i-1][j] + u[i+1][j] + u[i][j-1] + u[i][j+1] - h*h*f[i-1][j-1]);
+
+							// Current error with previous iteration
+							double curr_err = abs(u[i][j] - u_old);
+
+							// Update max error
+							if (curr_err > max_err) max_err = curr_err;
 						}
-		} while (max > eps); // Цикл выполняется до тех пор пока максимум ошибки не будет меньше заданной точности
+		} while (max_err > eps); // Do while desired tolerance not achieved
 	}
-	else
-	{
+	else {
 		cout << "Error!!!" << endl;
 	}
 	return IterCnt;
 }
 
-// Последовательная функция реализующая алгоритм Гаусса-Зейделя
-// Входные параметры: массиф неизвестных и краевых значений, массив правых частей, количество точек сетки по каждому направлению, точность вычислений
-int Calc_seq(double** u, double** f, int N, double eps)
-{
+// Sequential algorithm of Gauss–Seidel method
+int Calc_seq(double** u, double** f, int N, double eps) {
 
-	double max = 0;
-	double h = 1.0 / (N + 1);
+	double max_err = 0; // Max error
+	double h = 1.0 / (N + 1); // Grid step
+
 	cout << fixed << setprecision(10);
 
-	int IterCnt = 0; // Переменная хранящая количество выполненых итераций
-	do
-	{
+	int IterCnt = 0; // Iterations counter
+
+	do {
 		IterCnt++;
-		max = 0;
-		for (int i = 1; i < N + 1; i++) // Проход по строчкам матрицы
-			for (int j = 1; j < N + 1; j++) // Проход по столбцам матрицы
-			{
-				double u0 = u[i][j];
-				u[i][j] = 0.25 * (u[i - 1][j] + u[i + 1][j] // Расчет в соотвествии с формулами Гаусса-Зейделя
-					+ u[i][j - 1] + u[i][j + 1] - h * h * f[i - 1][j - 1]);
-				double d = abs(u[i][j] - u0); // Расчет модуля разности нового вычисленного значения неизвестной переменной и значения с предыдущей итераций
-				if (d > max) // Поиск максимальной ошибки
-					max = d;
+		max_err = 0;
+		for (int i = 1; i < N + 1; i++) // Array rows
+			for (int j = 1; j < N + 1; j++) { // Array columns
+				// Save previous value
+				double u_old = u[i][j];
+
+				// Gauss–Seidel method
+				// u[i][j] <-> f[i-1][j-1] as u N+2xN+2, f NxN
+				u[i][j] = 0.25*(u[i-1][j] + u[i+1][j] + u[i][j-1] + u[i][j+1] - h*h*f[i-1][j-1]);
+
+				// Current error with previous iteration
+				double curr_err = abs(u[i][j] - u_old);
+
+				// Update max error
+				if (curr_err > max_err) max_err = curr_err;
 			}
 
-	} while (max > eps); // Цикл выполняется до тех пор пока максимум ошибки не будет меньше заданной точности
+	} while (max_err > eps); // Do while desired tolerance not achieved
 	return IterCnt;
 }

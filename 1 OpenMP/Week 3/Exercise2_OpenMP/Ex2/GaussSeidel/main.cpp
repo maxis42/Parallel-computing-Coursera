@@ -1,5 +1,5 @@
 //------------------------------------------------------------
-// Программа решения уравнений пуассона методом Гаусса-Зейделя
+// Partial differential equations sover by Gauss�Seidel method
 //------------------------------------------------------------
 #include <iostream>
 #include <iomanip>
@@ -7,56 +7,68 @@
 #include <omp.h>
 #include "submit.h"
 #include "GaussSeidel.h"
-#include "locale.h"
+#include "windows.h"
 using namespace std;
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 		
 	double **u=NULL, **f=NULL;
 	double **u_ser=NULL, **f_ser=NULL;
-	double **u_par1 = NULL, **f_par1 = NULL;
+	double **u_par = NULL, **f_par = NULL;
 	
-	setlocale(LC_ALL, "Russian");
-	
-	int N = 600; // Количество точек сетки по каждой размерности
-	double eps = 0.0001; // Точность вычислений
-	int IterCnt; // Количество итераций
+	int N = 600; // N - number of points across each axis (square grid NxN)
+	double eps = 0.0001; // Calculation tolerance
+	int iter_cnt(0); // Iterations counter
 	double tt;
 
 	
-	
-	//	 Последовательная программа
+	// Sequential algorithm
+	tt = omp_get_wtime();
 
-		tt = omp_get_wtime(); 
-		f_ser = new_arr(N); // Выделение переменной под правую часть значений уравнения
-		u_ser = new_arr(N + 2); // Выделение памяти под неизвестные и краевые условия
-		Init(u_ser, f_ser, N); // Инициализация краевых условий и правой части уравнения
-		cout << "Проводятся расчеты по методу Гаусса-Зейделя (последовательный вариант)" << endl;
-		IterCnt=Calc_seq(u_ser, f_ser, N, eps); // Вызов функции расчета по методу Гаусса-Зейделя
-		tt = omp_get_wtime() - tt;
-		cout << "Serial Time = " << tt << " IterCnt = " << IterCnt << endl;
-		cout << "Результаты расчетов" << endl;
-		UOutput(u_ser, N); // Вывод результатов на экран. Выводится 10 строчек и столбцов итогового решения. Растояние между выведеными столбцами строчками одинаковое.
-		cout << endl;
+	f_ser = new_arr(N); // f memory allocation
+	u_ser = new_arr(N + 2); // u memory allocation
+	Init(u_ser, f_ser, N); // f and u initialization
 
-	   // Параллельная программа 
-		tt = omp_get_wtime();
-		f_par1 = new_arr(N); // Выделение переменной под правую часть значений уравнения
-		u_par1 = new_arr(N + 2); // Выделение памяти под неизвестные и краевые условия
-		Init(u_par1, f_par1, N); // Инициализация краевых условий и правой части уравнения
-		cout << "Проводятся расчеты по методу Гаусса-Зейделя (параллельный вариант)" << endl;
-		IterCnt = Calc_par(u_par1, f_par1, N,  eps); // Вызов функции расчета по методу Гаусса-Зейделя
-		tt = omp_get_wtime() - tt;
-		cout << "Par1 Time = " << tt << " IterCnt = " << IterCnt << endl;
-		cout << "Результаты расчетов" << endl;
-		UOutput(u_par1, N); // Вывод результатов на экран. Выводится 11 строчек и столбцов итогового решения. Растояние между выведеными столбцами строчками одинаковое.
+	cout << "Calculating by Gauss�Seidel method (sequential solver)..." << endl;
+	iter_cnt = Calc_seq(u_ser, f_ser, N, eps);
+
+	tt = omp_get_wtime() - tt;
+
+	cout << "Serial time = " << tt << " Num of iterations = " << iter_cnt << endl;
+
+	// Output result matrix
+	// Show only 11x11 array with equally spaced rows and columns
+	cout << "Result of calculation" << endl;
+	UOutput(u_ser, N);
+	cout << endl;
+
+	// Parallel algorithm
+	tt = omp_get_wtime();
+
+	f_par = new_arr(N); // f memory allocation
+	u_par = new_arr(N + 2); // u memory allocation
+	Init(u_par, f_par, N); // f and u initialization
+
+	cout << "Calculating by Gauss�Seidel method (parallel solver)..." << endl;
+	iter_cnt = Calc_par_block(u_par, f_par, N, eps);
+
+	tt = omp_get_wtime() - tt;
+
+	cout << "Parallel time = " << tt << " Num of iterations = " << iter_cnt << endl;
+
+	// Output result matrix
+	// Show only 11x11 array with equally spaced rows and columns
+	cout << "Result of calculation" << endl;
+	UOutput(u_par, N);
+	cout << endl;
 
 
-	
-	Submit_Part1(N,eps,Calc_seq);
-	
-//	Submit_Part2(Calc_par);
+	Submit_Part1(N, eps, Calc_seq);
+	Submit_Part2(Calc_par_block);
+
+	system("pause");
 
 	return 0;
 }

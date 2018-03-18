@@ -1,9 +1,2 @@
-﻿  calc_par.cpp
-  calc_seq.cpp
-  init.cpp
-init.cpp(14): warning #1011: missing return statement at end of non-void function "G"
-    }
-    ^
-  
-  main.cpp
+﻿  main.cpp
   GaussSeidel.vcxproj -> D:\Parallel-computing-Coursera\1 OpenMP\Week 3\Exercise2_OpenMP\Ex2\Release\GaussSeidel.exe
