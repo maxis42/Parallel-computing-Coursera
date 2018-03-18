@@ -1,0 +1,22 @@
+﻿Build started 27.09.2015 18:36:13.
+     1>Project "I:\Работа\MOOC\Практика\Итоговая\FinalExercise\ImageProcessing\ImageProcessing.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         F:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"I:\Работа\MOOC\Практика\Итоговая\ImageProcessing_submit\dll_test" /ZI /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt EasyBMP.cpp main.cpp
+         main.cpp
+         EasyBMP.cpp
+     1>i:\работа\mooc\практика\итоговая\finalexercise\imageprocessing\easybmp.cpp(1876): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+     1>i:\работа\mooc\практика\итоговая\finalexercise\imageprocessing\easybmp.cpp(1877): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>i:\работа\mooc\практика\итоговая\finalexercise\imageprocessing\easybmp.cpp(1884): warning C4244: '=': conversion from 'float' to 'ebmpBYTE', possible loss of data
+     1>i:\работа\mooc\практика\итоговая\finalexercise\imageprocessing\easybmp.cpp(1885): warning C4244: '=': conversion from 'float' to 'ebmpBYTE', possible loss of data
+     1>i:\работа\mooc\практика\итоговая\finalexercise\imageprocessing\easybmp.cpp(1886): warning C4244: '=': conversion from 'float' to 'ebmpBYTE', possible loss of data
+     1>i:\работа\mooc\практика\итоговая\finalexercise\imageprocessing\easybmp.cpp(1887): warning C4244: '=': conversion from 'float' to 'ebmpBYTE', possible loss of data
+         Generating Code...
+       Link:
+         F:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"I:\Работа\MOOC\Практика\Итоговая\FinalExercise\Debug\ImageProcessing.exe" /INCREMENTAL /NOLOGO /LIBPATH:"I:\Работа\MOOC\Практика\Итоговая\ImageProcessing_submit\Release" dll_submit.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"I:\Работа\MOOC\Практика\Итоговая\FinalExercise\Debug\ImageProcessing.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"I:\Работа\MOOC\Практика\Итоговая\FinalExercise\Debug\ImageProcessing.lib" /MACHINE:X86 Debug\EasyBMP.obj
+         Debug\main.obj
+         ImageProcessing.vcxproj -> I:\Работа\MOOC\Практика\Итоговая\FinalExercise\Debug\ImageProcessing.exe
+     1>Done Building Project "I:\Работа\MOOC\Практика\Итоговая\FinalExercise\ImageProcessing\ImageProcessing.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.16
